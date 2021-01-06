@@ -481,49 +481,48 @@ Author URL: http://w3layouts.com
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['大一上', '大一下', '大二上', '大二下'],
-            datasets: [{
-                label: '班級排名',
-                data: [4,2,1,1],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
-            tooltips: {
-                mode: 'index'
-            },
-            hover: {
-                mode: 'index',
-                intersect: false
-            }
-        }
-    });
+    var myChart = new Chart(ctx, { 
+        type: 'line', 
+        data: { 
+        labels: ['大一上', '大一下', '大二上', '大二下'], 
+        datasets: [{ 
+          label: '班級排名', 
+          yAxisID: '班級排名', 
+          data: [4, 2, 1, 1],
+          borderColor: "rgba(248,77,80,1)",
+          fill: true,
+          backgroundColor: "rgba(248,77,80,0.3)"
+          }, { 
+          label: '學期成績', 
+          yAxisID: '學期成績', 
+          data: [85, 88, 88, 89],
+          borderColor: "rgba(158,0,0,1)",
+          fill: true,
+          backgroundColor: "rgba(158,0,0,0.3)"
+          }] 
+        }, 
+        options: { 
+        scales: { 
+            yAxes: [{ 
+            id: '學期成績', 
+            type: 'linear', 
+            position: 'left', 
+            ticks: { 
+              max: 100, 
+              min: 75 
+            } 
+            }, { 
+            id: '班級排名', 
+            type: 'linear', 
+            position: 'right', 
+            ticks: { 
+              max: 5, 
+              min: 0 
+            } 
+            }] 
+        } 
+        } 
+});
   </script>
 
 
