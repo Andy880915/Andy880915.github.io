@@ -421,8 +421,9 @@ mark,
     content: "\2014\00A0"; }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto; }
+
+  max-height: 100%;
+  object-fit:cover }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -4933,6 +4934,7 @@ button.bg-dark:focus {
   display: inline-block !important; }
 
 .d-block {
+  
   display: block !important; }
 
 .d-table {
@@ -10591,7 +10593,7 @@ h3.global-white {
   color: var(--primary-color); }
 
 .w3l-services2 .features-with-17-left_sur {
-  background: url(../images/proff.jpg) no-repeat center;
+  background: url(../images/proff.jpg) no-repeat left;
   background-size: cover;
   background-attachment: scroll;
   min-height: 640px; }
@@ -10662,6 +10664,8 @@ h3.global-white {
 
 .w3l-gallery2 .js-img-viwer {
   position: relative;
+  height: 100%;
+  object-fit:cover ;
   border: 8px solid #fff; }
 
 .w3l-gallery2 .js-img-viwer:hover .content-overlay {
