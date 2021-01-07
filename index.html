@@ -17,6 +17,21 @@ Author URL: http://w3layouts.com
   <!-- web fonts -->
   <link href="//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+
+  <style>
+    .parallax {
+        /* 設定背景圖片/居中/不重覆 */
+        background: url("assets/images/proff.jpg")center center no-repeat;
+
+      /* 設定區塊高度 */
+        min-height: 600px;
+
+
+      /* 背景自動縮放/固定 */
+        background-attachment: fixed;
+        background-size: cover;
+      }
+  </style>
   
 
   <!-- /web fonts -->
@@ -161,9 +176,11 @@ Author URL: http://w3layouts.com
   <!--  //Fun facts section -->
   
   <section class="w3l-services2">
-    <div class="row">
-        <img src="assets/images/proff.jpg" max-width=100% style="object-fit:cover" >
+    <div class="parallax" >
     </div>
+    <!-- <div class="row">
+        <img src="assets/images/proff.jpg" max-width=100% style="object-fit:cover" >
+    </div> -->
   </section>
   <!--  Work gallery section -->
 <!--  services section -->
