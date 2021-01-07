@@ -27,7 +27,7 @@ Author URL: http://w3layouts.com
 <body>
   <!-- header -->
   <header class="w3l-header">
-    <div class="hero-header-11">
+    <div class="hero-header-11" id="index">
       <div class="hero-header-11-content">
         <div class="container">
           <nav class="navbar navbar-expand-xl navbar-light py-sm-2 py-1 px-0">
@@ -162,9 +162,7 @@ Author URL: http://w3layouts.com
   
   <section class="w3l-services2">
     <div class="row">
-      <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
         <img src="assets/images/proff.jpg" max-width=100% style="object-fit:cover" >
-      </div>
     </div>
   </section>
   <!--  Work gallery section -->
@@ -346,7 +344,7 @@ Author URL: http://w3layouts.com
           </div>
         </div>
         <div class="text-center">
-          <a href="index.html" class="follow-insta-button btn btn-secondary p-3 mt-5">
+          <a href="#index" class="follow-insta-button btn btn-secondary p-3 mt-5">
             回到頁首
           </a>
         </div>
@@ -473,6 +471,10 @@ Author URL: http://w3layouts.com
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <script>
+    new WOW().init();
+  </script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, { 
